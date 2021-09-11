@@ -20,7 +20,6 @@ jobs:
            git config --global user.email "${GitHubMail}"
            git config --global user.name "${GitHubName}"
            echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
-           sudo apt install expect -y
 
        - name: cloning repo
          continue-on-error: false
