@@ -33,6 +33,7 @@ jobs:
          run: |
            cd bot
            pip3 install -U -r requirements.txt
+           pip3 install -U -r resources/extras/local-requirements.txt
            bash resources/startup/startup.sh
        
        - name: Loop workflow
