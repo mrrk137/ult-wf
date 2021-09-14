@@ -32,4 +32,5 @@ jobs:
          run: |
            cd bot
            pip3 install -U -r requirements.txt
+           pip3 install -U enhancer py-Ultroid
            bash resources/startup/startup.sh
