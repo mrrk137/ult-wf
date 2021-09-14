@@ -32,15 +32,4 @@ jobs:
          run: |
            cd bot
            pip3 install -U -r requirements.txt
-           pip3 install -U -r resources/extras/local-requirements.txt
            bash resources/startup/startup.sh
-       
-       - name: Loop workflow
-         continue-on-error: true
-         run: |
-          git clone https://${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY} loop
-          cd loop || exit 1
-          echo $(( RANDOM - ( RANDOM % RANDOM ) )) > loop.txt
-          git add loop.txt
-          git commit -m "Workflow : Loop"
-          git push -q https://${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:main
