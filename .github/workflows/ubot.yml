@@ -24,7 +24,7 @@ jobs:
        - name: cloning repo
          continue-on-error: false
          run: |
-           git clone -b main https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com/rahulkhatri137/ultroi bot
+           git clone -b temp https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com/rahulkhatri137/ultroi bot
 
        - name: Running Bot
          timeout-minutes: 350
